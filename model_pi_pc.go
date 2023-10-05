@@ -7,6 +7,8 @@
 package orangepi
 
 import (
+	"fmt"
+
 	"periph.io/x/conn/v3/gpio"
 	"periph.io/x/conn/v3/pin"
 	"periph.io/x/conn/v3/pin/pinreg"
@@ -72,9 +74,10 @@ var (
 
 // registerHeaders registers the headers for various Orange Pi boards. Currently
 // only Orange Pi PC is supported.
-func registerHeaders_PiPC() error {
+func RegisterHeaders_PiPC() error {
 	// http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-PC.html
 
+	fmt.Println("Registering Orange Pi PC headers")
 	// 26pin expansion port
 	if err := pinreg.Register("PA", [][]pin.Pin{
 		{PA1_1, PA1_2},

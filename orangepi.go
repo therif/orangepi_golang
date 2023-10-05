@@ -40,7 +40,7 @@ func registerHeaders(model string) error {
 	if strings.Contains(model, boardZero) {
 		// registerHeaders_PiZero()
 	} else if strings.Contains(model, boardPC) || strings.Contains(model, boardPCPlus) {
-		registerHeaders_PiPC()
+		RegisterHeaders_PiPC()
 	}
 
 	return nil
